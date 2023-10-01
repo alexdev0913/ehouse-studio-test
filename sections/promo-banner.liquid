@@ -1,0 +1,55 @@
+{%- if section.settings.enable and section.settings.text != blank -%}
+
+{{ 'section-promo-banner.css' | asset_url | stylesheet_tag }}
+
+<div id="promo-banner-{{ section.settings.id }}" class="promo-banner-wrapper">
+  {% style %}
+    #promo-banner-{{ section.settings.id }} {
+      background: {{ section.settings.bg_color }};
+      color: {{ section.settings.text_color }};
+    }
+  {% endstyle %}
+
+  <div class="promo-banner__text">
+    {{ section.settings.text }}
+  </div>
+</div>
+
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "t:sections.promo-banner.name",
+    "class": "promo-banner-section",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "t:sections.promo-banner.settings.enable.label",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "t:sections.promo-banner.settings.background.label",
+        "default": "#005BC4"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "t:sections.promo-banner.settings.text.color",
+        "default": "#FFF"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "t:sections.promo-banner.settings.text.label"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.promo-banner.presets.name"
+      }
+    ]
+  }
+{% endschema %}

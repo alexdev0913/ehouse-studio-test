@@ -3323,6 +3323,24 @@
       "presets": {
         "name": "Collapsible content"
       }
+    },
+    "promo-banner": {
+      "name": "Promo banner",
+      "settings": {
+        "text": {
+          "color": "Text Color",
+          "label": "Text"
+        },
+        "background": {
+          "label": "Background color"
+        },
+        "enable": {
+          "label": "Enable"
+        }
+      },
+      "presets": {
+        "name": "Promo banner"
+      }
     }
   }
 }
