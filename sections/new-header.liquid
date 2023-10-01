@@ -1,0 +1,104 @@
+<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
+
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+<div class="new-header header-wrapper">
+  <div class="new-header__mobile">
+
+    {% render 'header-drawer' %}
+    
+    {% render 'new-header-logo' %}
+
+    {% render 'new-header-cart' %}
+  </div>
+
+  <div class="new-header__desktop">
+
+    {% render 'new-header-logo' %}
+
+    <ul class="new-header__nav-links">
+      {%- if section.settings.menu != blank -%}
+        {% for link in section.settings.menu.links %}
+          <li>
+            <a class="new-header__nav-link" href="{{ link.url }}">{{ link.title }}</a>
+          </li>          
+        {% endfor %}
+      {%- endif -%}
+      {%- if section.settings.enable_sales_link and section.settings.sales_link_text != blank -%}
+        <li>
+          <a class="new-header__nav-link new-header__nav-link--sale" href="{{ section.settings.sales_link_url }}">
+            {{ section.settings.sales_link_text }}
+          </a>
+        </li>
+      {%- endif -%}
+    </ul>
+
+    <div class="new-header__search-wrapper">
+      <input type="text" class="new-header__search-input" placeholder="Search">
+      <a class="new-header__search-link" href="{{ routes.search_url }}" >
+        {% render 'icon-search' %}
+      </a>
+    </div>
+
+    <div class="new-header__action-links">
+
+      <a class="new-header__acount-link" href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}">
+
+          {%- liquid
+            if customer
+              echo 'customer.account_fallback' | t
+            else
+              echo 'customer.log_in' | t
+            endif
+          -%}
+      </a>
+      <div class="new-header__action-link-divider"></div>
+
+      {% render 'new-header-cart' %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.new-header.name",
+    "class": "section-header",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "t:sections.new-header.settings.logo.label"
+      },
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "t:sections.new-header.settings.menu.label"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.new-header.settings.sales_link.header"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sales_link",
+        "label": "t:sections.new-header.settings.sales_link.enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "sales_link_text",
+        "label": "t:sections.new-header.settings.sales_link.label"
+      },
+      {
+        "type": "url",
+        "id": "sales_link_url",
+        "label": "t:sections.new-header.settings.sales_link.url"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.new-header.presets.name"
+      }
+    ]
+  }
+{% endschema %}

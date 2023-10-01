@@ -3341,6 +3341,26 @@
       "presets": {
         "name": "Promo banner"
       }
+    },
+    "new-header": {
+      "name": "Header",
+      "settings": {
+        "logo": {
+          "label": "Logo"
+        },
+        "menu": {
+          "label": "Menu"
+        },
+        "sales_link": {
+          "header": "Sales Link",
+          "enable": "Enable",
+          "label": "Sales link text",
+          "url": "Sales link URL"
+        }
+      },
+      "presets": {
+        "name": "Header"
+      }
     }
   }
 }

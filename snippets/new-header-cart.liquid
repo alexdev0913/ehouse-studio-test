@@ -1,0 +1,8 @@
+<a href="{{ routes.cart_url }}" class="new-header__cart-wrapper">
+  {% render 'icon-cart' %}
+  {% comment %} ========== This is dynamic cart icon =========
+  {% if cart == empty %}
+    <span class="new-header__cart-count">{{ cart.item_count }}</span>
+  {% endif %} {% endcomment %}
+  <span class="new-header__cart-count">3</span>
+</a>

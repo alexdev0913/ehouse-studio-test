@@ -1,0 +1,13 @@
+<a href="{{ routes.root_url }}">
+  {%- if section.settings.logo != blank -%}
+    {{ section.settings.logo | image_url: width: 600 | image_tag:
+      class: 'new-header__heading-logo motion-reduce',
+      height: 51,
+      width: 240,
+      alt: section.settings.logo.alt,
+      preload: true
+    }}
+  {%- else -%}
+    <span class="h2">{{ shop.name }}</span>
+  {%- endif -%}
+</a>
