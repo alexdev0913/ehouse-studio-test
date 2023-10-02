@@ -1,5 +1,50 @@
 {
   "sections": {
+    "1bb60c65-297e-470a-a08f-0c481f27f708": {
+      "type": "hero-banner",
+      "blocks": {
+        "42b35321-fbfd-41c4-8243-afb5ea6bf172": {
+          "type": "cta_block",
+          "settings": {
+            "cta_text": "women",
+            "cta_url": "shopify:\/\/collections"
+          }
+        },
+        "11cfb004-6410-4ecd-9c2a-45a182c69e5f": {
+          "type": "cta_block",
+          "settings": {
+            "cta_text": "men",
+            "cta_url": "shopify:\/\/collections"
+          }
+        },
+        "73dd66bb-d911-4b47-bd68-591aae8f38d1": {
+          "type": "cta_block",
+          "settings": {
+            "cta_text": "kids",
+            "cta_url": "shopify:\/\/collections"
+          }
+        },
+        "02071c67-8436-4321-983f-8bcd8f3cd867": {
+          "type": "cta_block",
+          "settings": {
+            "cta_text": "home",
+            "cta_url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "42b35321-fbfd-41c4-8243-afb5ea6bf172",
+        "11cfb004-6410-4ecd-9c2a-45a182c69e5f",
+        "73dd66bb-d911-4b47-bd68-591aae8f38d1",
+        "02071c67-8436-4321-983f-8bcd8f3cd867"
+      ],
+      "settings": {
+        "desktop_background_image": "shopify:\/\/shop_images\/hero-banner-desktop-image.png",
+        "mobile_background_image": "shopify:\/\/shop_images\/hero-banner-mobile-image.jpg",
+        "subtitle": "IN STORES & ONLINE",
+        "title": "<p>50% OFF<\/p><p>EVERYTHING<\/p>"
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -69,6 +114,7 @@
     }
   },
   "order": [
+    "1bb60c65-297e-470a-a08f-0c481f27f708",
     "image_banner",
     "featured_collection"
   ]

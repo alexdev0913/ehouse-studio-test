@@ -3361,6 +3361,37 @@
       "presets": {
         "name": "Header"
       }
+    },
+    "hero-banner": {
+      "name": "Hero banner",
+      "settings": {
+        "background_image": {
+          "desktop_label": "Desktop background image",
+          "mobile_label": "Mobile background image"
+        },
+        "subtitle": {
+          "label": "Subtitle"
+        },
+        "title": {
+          "label": "Title"
+        }
+      },
+      "blocks": {
+        "cta_block": {
+          "name": "CTA block",
+          "settings": {
+            "cta_text": {
+              "label": "CTA Text"
+            },
+            "cta_url": {
+              "label": "CTA URL"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Hero banner"
+      }
     }
   }
 }

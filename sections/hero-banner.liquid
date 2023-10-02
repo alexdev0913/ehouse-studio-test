@@ -1,0 +1,91 @@
+{{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="hero-banner">
+  <div class="hero-banner__image-wrapper">
+    {%- liquid
+      assign desktop_background = section.settings.desktop_background_image
+      assign mobile_background = section.settings.mobile_background_image | default: desktop_background
+    -%}
+    {%- if desktop_background == blank -%}
+      {{ 'image' | placeholder_svg_tag }}
+    {%- else -%}
+      {{ desktop_background | image_url: width: 2000 | image_tag:
+        class: 'hero-banner__image hero-banner__image--desktop',
+        alt: desktop_background.alt,
+        preload: true
+      }}
+      {{ mobile_background | image_url: width: 800 | image_tag:
+        class: 'hero-banner__image hero-banner__image--mobile',
+        alt: mobile_background.alt,
+        preload: true
+      }}
+    {%- endif -%}
+  </div>
+  <div class="hero-banner__content-wrapper">
+    {%- if section.settings.subtitle != blank -%}
+      <div class="hero-banner__subtitle">{{ section.settings.subtitle }}</div>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h1 class="hero-banner__title">{{ section.settings.title }}</h1>
+    {%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <div class="hero-banner__cta-list">
+        {%- for block in section.blocks -%}
+          <a href="{{ block.settings.cta_url }}" class="hero-banner__cta">{{ block.settings.cta_text }}</a>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.hero-banner.name",
+    "class": "hero-banner-section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "desktop_background_image",
+        "label": "t:sections.hero-banner.settings.background_image.desktop_label"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_background_image",
+        "label": "t:sections.hero-banner.settings.background_image.mobile_label"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "t:sections.hero-banner.settings.subtitle.label"
+      },
+      {
+        "type": "richtext",
+        "id": "title",
+        "label": "t:sections.hero-banner.settings.title.label"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "cta_block",
+        "name": "t:sections.hero-banner.blocks.cta_block.name",
+        "settings": [
+          {
+            "type": "text",
+            "id": "cta_text",
+            "label": "t:sections.hero-banner.blocks.cta_block.settings.cta_text.label"
+          },
+          {
+            "type": "url",
+            "id": "cta_url",
+            "label": "t:sections.hero-banner.blocks.cta_block.settings.cta_url.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.hero-banner.presets.name"
+      }
+    ]
+  }
+{% endschema %}
