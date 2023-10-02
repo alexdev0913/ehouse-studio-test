@@ -80,11 +80,13 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 26px;
+    justify-content: center;
   }
 
   .two-image-column__block {
     position: relative;
     flex: 1;
+    max-width: 650px;
   }
 
   .two-image-column__block-content-wrapper {
