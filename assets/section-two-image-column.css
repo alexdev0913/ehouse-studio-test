@@ -1,0 +1,136 @@
+.two-image-column__block-image-wrapper {
+  position: relative;
+  padding-top: 100%;
+}
+
+.two-image-column__block-image-wrapper svg,
+.two-image-column__block-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.two-image-column__block-content-wrapper {
+  padding: 28px 10px;
+  text-align: center;
+  color: #141414;
+}
+
+.two-image-column__block-title {
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 2.14px;
+  margin: 0 0 14px;
+}
+
+.two-image-column__block-copy {
+  font-size: 14px;
+  letter-spacing: 0.88px;
+  line-height: 22px;
+  margin-bottom: 13px;
+}
+
+.two-image-column__block-linklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two-image-column__block-link,
+.two-image-column__block-cta {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #141414;
+}
+
+.two-image-column__block-link a:-webkit-any-link {
+  color: #141414;
+}
+
+
+.two-image-column__block-link-divider:empty {
+  width: 1px;
+  height: 12px;
+  background: #141414;
+  margin: 0 8px;
+  display: block;
+}
+
+.two-image-column-section {
+  padding: 25px 0;
+}
+
+@media (min-width: 768px) {
+  .two-image-column-section {
+    padding: 50px 0;
+  }
+
+  .two-image-column {
+    display: flex;
+    column-gap: 18px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 26px;
+  }
+
+  .two-image-column__block {
+    position: relative;
+    flex: 1;
+  }
+
+  .two-image-column__block-content-wrapper {
+    position: absolute;
+    background: #FFFFFF;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 20px;
+  }
+
+  .two-image-column__block-title {
+    font-size: 28px;
+    letter-spacing: 3px;
+    margin-bottom: 23px;
+  }
+  
+  .two-image-column__block-copy {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 26px;
+    margin-bottom: 18px;
+  }
+  
+  .two-image-column__block-link,
+  .two-image-column__block-cta {
+    line-height: 28px;
+  }
+  
+  .two-image-column__block-link-divider:empty {
+    width: 1px;
+    height: 12px;
+    margin: 0 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .two-image-column {
+    column-gap: 36px;
+    padding: 0 52px;
+  }
+
+  .two-image-column__block-content-wrapper {
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    padding: 46px 98px;
+  }
+}

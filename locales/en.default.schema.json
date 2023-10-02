@@ -3415,6 +3415,35 @@
       "presets": {
         "name": "Text with image"
       }
+    },
+    "two-image-column": {
+      "name": "Two image column",
+      "blocks": {
+        "name": "Image block",
+        "settings": {
+          "image": {
+            "label": "Image"
+          },
+          "title": {
+            "label": "Title"
+          },
+          "copy": {
+            "label": "Copy"
+          },
+          "linklist": {
+            "label": "Linklist"
+          },
+          "cta_text": {
+            "label": "CTA Text"
+          },
+          "cta_url": {
+            "label": "CTA URL"
+          }
+        }
+      },
+      "presets": {
+        "name": "Two image column"
+      }
     }
   }
 }

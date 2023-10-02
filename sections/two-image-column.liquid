@@ -1,0 +1,91 @@
+{%- if section.blocks.size > 0 -%}
+  {{ 'section-two-image-column.css' | asset_url | stylesheet_tag }}
+
+  <div class="two-image-column">
+    {%- for block in section.blocks -%}
+      <div class="two-image-column__block">
+        <div class="two-image-column__block-image-wrapper">
+          {%- if block.settings.image == blank -%}
+            {{ 'image' | placeholder_svg_tag }}
+          {%- else -%}
+            <picture>
+              <source media="(min-width: 768px)" srcset="{{ block.settings.image | image_url: width: 1300 }}" >
+              <img src="{{ block.settings.image | image_url: width: 640 }}" alt="{{ block.settings.image.alt }}" class="two-image-column__block-image" />
+            </picture>
+          {%- endif -%}
+        </div>
+        <div class="two-image-column__block-content-wrapper">
+          {%- if block.settings.title != blank -%}
+            <h2 class="two-image-column__block-title">{{ block.settings.title }}</h2>
+          {%- endif -%}
+          {%- if block.settings.copy != blank -%}
+            <div class="two-image-column__block-copy">{{ block.settings.copy }}</div>
+          {%- endif -%}
+          {%- if block.settings.linklist != blank -%}
+            <ul class="two-image-column__block-linklist">
+              {%- for item in block.settings.linklist.links -%}
+                <li class="two-image-column__block-link">
+                  <a href="{{ item.url }}">{{ item.title }}</a>
+                </li>
+                {%- unless forloop.last -%}<div class="two-image-column__block-link-divider"></div>{%- endunless -%}
+              {%- endfor -%}
+            </ul>
+          {%- elsif block.settings.cta_text != blank and block.settings.cta_url != blank -%}
+            <a href="{{ block.settings.cta_url }}" class="two-image-column__block-cta">{{ block.settings.cta_text }}</a>  
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "t:sections.two-image-column.name",
+    "class": "two-image-column-section",
+    "max_blocks": 2,
+    "blocks": [
+      {
+        "type": "image_block",
+        "name": "t:sections.two-image-column.blocks.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "t:sections.two-image-column.blocks.settings.image.label"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.two-image-column.blocks.settings.title.label"
+          },
+          {
+            "type": "text",
+            "id": "copy",
+            "label": "t:sections.two-image-column.blocks.settings.copy.label"
+          },
+          {
+            "type": "link_list",
+            "id": "linklist",
+            "label": "t:sections.two-image-column.blocks.settings.linklist.label"
+          },
+          {
+            "type": "text",
+            "id": "cta_text",
+            "label": "t:sections.two-image-column.blocks.settings.cta_text.label"
+          },
+          {
+            "type": "url",
+            "id": "cta_url",
+            "label": "t:sections.two-image-column.blocks.settings.cta_url.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.two-image-column.presets.name"
+      }
+    ]
+  }
+{% endschema %}

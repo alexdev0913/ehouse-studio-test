@@ -54,10 +54,44 @@
         "cta_text": "SHOP SUMMER ESSENTIA",
         "cta_url": "shopify:\/\/collections"
       }
+    },
+    "8c3493d1-5c92-4f02-9270-c79369ff4461": {
+      "type": "two-image-column",
+      "blocks": {
+        "6a2706a8-1bd7-468c-9122-ccb982fe34c7": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-image-column-image1.png",
+            "title": "NEW ARRIVALS",
+            "copy": "Our latest Summer styles. Fresh. Fun. Fabulous.",
+            "linklist": "header-navigation",
+            "cta_text": "",
+            "cta_url": ""
+          }
+        },
+        "ecd913b3-a60f-4e38-b02c-6f51c97f9d26": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-image-column-image2.png",
+            "title": "COLLEGE BOUND",
+            "copy": "New places and new faces. Same great style.",
+            "linklist": "",
+            "cta_text": "SHOP DORM DECOR",
+            "cta_url": "shopify:\/\/collections"
+          }
+        }
+      },
+      "block_order": [
+        "6a2706a8-1bd7-468c-9122-ccb982fe34c7",
+        "ecd913b3-a60f-4e38-b02c-6f51c97f9d26"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "1bb60c65-297e-470a-a08f-0c481f27f708",
-    "5eeed172-5cbf-45a7-bb34-8b29e9768ebd"
+    "5eeed172-5cbf-45a7-bb34-8b29e9768ebd",
+    "8c3493d1-5c92-4f02-9270-c79369ff4461"
   ]
 }
