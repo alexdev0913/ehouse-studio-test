@@ -1,0 +1,49 @@
+.icon-list {
+  background-image: linear-gradient(212deg, #FAFBFB 0%, #F7F8F8 100%);
+  padding: 45px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  align-items: center;
+}
+
+.icon-list__block {
+  max-width: 140px;
+  text-align: center;
+}
+
+.icon-list__block-icon {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.icon-list__block-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #141414;
+  letter-spacing: 0.8px;
+  line-height: 24px;
+}
+
+@media (min-width: 768px) {
+  .icon-list {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+  }
+
+  .icon-list__block {
+    max-width: 190px;
+  }
+
+  .icon-list__block-icon {
+    width: 75px;
+    margin-bottom: 25px;
+  }
+
+  .icon-list__block-title {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 28px;
+  }
+}

@@ -87,11 +87,45 @@
       ],
       "settings": {
       }
+    },
+    "b5b2ce55-7b50-4fa7-b531-17c220842bd2": {
+      "type": "section-icon-list",
+      "blocks": {
+        "583bf90d-7f12-447c-86e0-69d5b0e86d1b": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/shipping-icon.png",
+            "title": "FREE SHIPPING ON ALL ORDERS"
+          }
+        },
+        "2698afdb-8449-4cbb-b154-04ef02808ecf": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/returns-icon.png",
+            "title": "FREE RETURNS ON ALL ORDERS"
+          }
+        },
+        "b7f58dfe-ef09-47b9-8cdf-dff95e6d5ecd": {
+          "type": "icon_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/checkout-icon.png",
+            "title": "SAFE & SECURE CHECKOUT"
+          }
+        }
+      },
+      "block_order": [
+        "583bf90d-7f12-447c-86e0-69d5b0e86d1b",
+        "2698afdb-8449-4cbb-b154-04ef02808ecf",
+        "b7f58dfe-ef09-47b9-8cdf-dff95e6d5ecd"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "1bb60c65-297e-470a-a08f-0c481f27f708",
     "5eeed172-5cbf-45a7-bb34-8b29e9768ebd",
-    "8c3493d1-5c92-4f02-9270-c79369ff4461"
+    "8c3493d1-5c92-4f02-9270-c79369ff4461",
+    "b5b2ce55-7b50-4fa7-b531-17c220842bd2"
   ]
 }

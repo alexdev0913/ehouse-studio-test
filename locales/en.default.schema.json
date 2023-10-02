@@ -3444,6 +3444,23 @@
       "presets": {
         "name": "Two image column"
       }
+    },
+    "icon-list": {
+      "name": "Icon list",
+      "blocks": {
+        "name": "Icon block",
+        "settings": {
+          "icon": {
+            "label": "Icon"
+          },
+          "title": {
+            "label": "Title"
+          }
+        }
+      },
+      "presets": {
+        "name": "Icon list"
+      }
     }
   }
 }

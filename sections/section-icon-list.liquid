@@ -1,0 +1,48 @@
+{%- if section.blocks.size > 0 -%}
+  {{ 'section-icon-list.css' | asset_url | stylesheet_tag }}
+
+  <div class="icon-list">
+    {%- for block in section.blocks -%}
+      <div class="icon-list__block">
+        {%- if block.settings.icon != blank -%}
+          <img src="{{ block.settings.icon | image_url: width: 150 }}" alt="{{ block.settings.icon.alt }}" class="icon-list__block-icon">
+        {%- endif -%}
+        {%- if block.settings.title != blank -%}
+          <div class="icon-list__block-title">{{ block.settings.title }}</div>
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "t:sections.icon-list.name",
+    "class": "icon-list-section",
+    "max_blocks": 5,
+    "blocks": [
+      {
+        "type": "icon_block",
+        "name": "t:sections.icon-list.blocks.name",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "t:sections.icon-list.blocks.settings.icon.label"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "t:sections.icon-list.blocks.settings.title.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.icon-list.presets.name"
+      }
+    ]
+  }
+{% endschema %}
