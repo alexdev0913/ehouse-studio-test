@@ -63,7 +63,7 @@
 
 @media (min-width: 768px) {
   .text-with-image {
-    padding-bottom: 0;
+    padding-bottom: 20vw;
     margin-left: 53px;
   }
   .text-with-image__image-wrapper {
@@ -124,5 +124,9 @@
   .text-with-image__content-container {
     padding: 30px;
     height: 100%;
+  }
+
+  .text-with-image {
+    padding-bottom: 0;
   }
 }
