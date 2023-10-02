@@ -3392,6 +3392,29 @@
       "presets": {
         "name": "Hero banner"
       }
+    },
+    "text-with-image": {
+      "name": "Text with image",
+      "settings": {
+        "image": {
+          "label": "Image"
+        },
+        "title": {
+          "label": "Title"
+        },
+        "copy": {
+          "label": "Copy"
+        },
+        "cta_text": {
+          "label": "CTA Text"
+        },
+        "cta_url": {
+          "label": "CTA URL"
+        }
+      },
+      "presets": {
+        "name": "Text with image"
+      }
     }
   }
 }

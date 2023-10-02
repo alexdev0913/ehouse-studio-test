@@ -1,0 +1,128 @@
+.text-with-image {
+  position: relative;
+  padding-bottom: 62vw;
+}
+
+.text-with-image__image-wrapper {
+  position: relative;
+  padding-top: 70%;
+}
+
+.text-with-image__image-wrapper svg,
+.text-with-image__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-with-image__content-container {
+  position: absolute;
+  top: 52vw;
+  background: #FFF;
+  padding: 20px;
+  left: 0;
+  right: 10px;
+}
+
+.text-with-image__content-wrapper {
+  border: 2px solid #ECECEC;
+  padding: 25px 20px;
+  color: #141414;
+}
+
+.text-with-image__title {
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 0;
+  margin: 0 0 15px;
+}
+
+.text-with-image__copy {
+  font-size: 14px;
+  letter-spacing: 0.88px;
+  text-align: left;
+  line-height: 22px;
+  margin-bottom: 27px;
+}
+
+.text-with-image__cta {
+  font-weight: 600;
+  font-size: 12px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  line-height: 28px;
+  background: #141414;
+  border-radius: 5px;
+  padding: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .text-with-image {
+    padding-bottom: 0;
+    margin-left: 53px;
+  }
+  .text-with-image__image-wrapper {
+    padding-top: 46.82%;
+  }
+  .text-with-image__image-wrapper svg,
+  .text-with-image__image {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 32vw);
+    margin-left: auto;
+  }
+
+  .text-with-image__content-container {
+    max-height: 380px;
+    height: max-content;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    padding: 20px;
+    left: 0;
+    right: initial;
+  }
+  
+  .text-with-image__content-wrapper {
+    border: 2px solid #ECECEC;
+    padding: 30px;
+  }
+  
+  .text-with-image__title {
+    font-size: 42px;
+    margin-bottom: 24px;
+  }
+  
+  .text-with-image__copy {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 31px;
+  }
+  
+  .text-with-image__cta {
+    font-size: 14px;
+    line-height: 28px;
+    padding: 18px 22px;
+  }
+
+  .text-with-image-section {
+    padding: 55px 0 72px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-with-image__content-wrapper {
+    padding: 60px 80px;
+  }
+
+  .text-with-image__content-container {
+    padding: 30px;
+    height: 100%;
+  }
+}
