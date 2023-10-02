@@ -2,32 +2,28 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to our store",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "announcement-bar-0"
-      ],
+    "16eb5822-6316-4b8f-8be5-216cd5b6cac4": {
+      "type": "promo-banner",
       "settings": {
-        "color_scheme": "background-1",
-        "show_line_separator": true,
-        "show_social": false,
-        "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "enable": true,
+        "bg_color": "#005BC4",
+        "text_color": "#FFF",
+        "text": "FREE SHIPPING & RETURNS ON EVERY ORDER!"
+      }
+    },
+    "552bb7cd-1d89-4088-b04f-955823e8c601": {
+      "type": "new-header",
+      "settings": {
+        "logo": "shopify:\/\/shop_images\/logo.jpg",
+        "menu": "header-navigation",
+        "enable_sales_link": true,
+        "sales_link_text": "Sale",
+        "sales_link_url": "shopify:\/\/collections"
       }
     },
     "header": {
       "type": "header",
+      "disabled": true,
       "settings": {
         "logo_position": "middle-left",
         "menu": "main-menu",
@@ -46,7 +42,8 @@
     }
   },
   "order": [
-    "announcement-bar",
+    "16eb5822-6316-4b8f-8be5-216cd5b6cac4",
+    "552bb7cd-1d89-4088-b04f-955823e8c601",
     "header"
   ]
 }

@@ -122,6 +122,19 @@
     width: 150px;
     height: 35p;
   }
+
+  .new-header__cart-count {
+    font-size: 10px;
+    font-family: "RobotoBlack";
+    color: white;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -8px;
+    right: -8px;
+  }
 }
 
 @media (min-width: 1200px) {
